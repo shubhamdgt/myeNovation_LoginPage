@@ -1,158 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <style>
+      .market-btn {
+        display: inline-block;
+        padding: 0.3125rem 0.875rem;
+        padding-left: 2.8125rem;
+        -webkit-transition: border-color 0.25s ease-in-out,
+          background-color 0.25s ease-in-out;
+        transition: border-color 0.25s ease-in-out,
+          background-color 0.25s ease-in-out;
+        border: 1px solid #e7e7e7;
+        background-position: center left 0.75rem;
+        background-color: #fff;
+        background-size: 1.5rem 1.5rem;
+        background-repeat: no-repeat;
+        text-decoration: none;
+      }
+      .market-btn .market-button-title {
+        display: block;
+        color: #222;
+        font-size: 1.125rem;
+      }
+      .market-btn .market-button-subtitle {
+        display: block;
+        margin-bottom: -0.25rem;
+        color: #888;
+        font-size: 0.75rem;
+      }
+      .market-btn:hover {
+        background-color:  #6f44cd23;
+        text-decoration: none;
+      }
+      .apple-btn {
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDUgMzA1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDUgMzA1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnIGlkPSJYTUxJRF8yMjhfIj4KCTxwYXRoIGlkPSJYTUxJRF8yMjlfIiBkPSJNNDAuNzM4LDExMi4xMTljLTI1Ljc4NSw0NC43NDUtOS4zOTMsMTEyLjY0OCwxOS4xMjEsMTUzLjgyQzc0LjA5MiwyODYuNTIzLDg4LjUwMiwzMDUsMTA4LjIzOSwzMDUgICBjMC4zNzIsMCwwLjc0NS0wLjAwNywxLjEyNy0wLjAyMmM5LjI3My0wLjM3LDE1Ljk3NC0zLjIyNSwyMi40NTMtNS45ODRjNy4yNzQtMy4xLDE0Ljc5Ny02LjMwNSwyNi41OTctNi4zMDUgICBjMTEuMjI2LDAsMTguMzksMy4xMDEsMjUuMzE4LDYuMDk5YzYuODI4LDIuOTU0LDEzLjg2MSw2LjAxLDI0LjI1Myw1LjgxNWMyMi4yMzItMC40MTQsMzUuODgyLTIwLjM1Miw0Ny45MjUtMzcuOTQxICAgYzEyLjU2Ny0xOC4zNjUsMTguODcxLTM2LjE5NiwyMC45OTgtNDMuMDFsMC4wODYtMC4yNzFjMC40MDUtMS4yMTEtMC4xNjctMi41MzMtMS4zMjgtMy4wNjZjLTAuMDMyLTAuMDE1LTAuMTUtMC4wNjQtMC4xODMtMC4wNzggICBjLTMuOTE1LTEuNjAxLTM4LjI1Ny0xNi44MzYtMzguNjE4LTU4LjM2Yy0wLjMzNS0zMy43MzYsMjUuNzYzLTUxLjYwMSwzMC45OTctNTQuODM5bDAuMjQ0LTAuMTUyICAgYzAuNTY3LTAuMzY1LDAuOTYyLTAuOTQ0LDEuMDk2LTEuNjA2YzAuMTM0LTAuNjYxLTAuMDA2LTEuMzQ5LTAuMzg2LTEuOTA1Yy0xOC4wMTQtMjYuMzYyLTQ1LjYyNC0zMC4zMzUtNTYuNzQtMzAuODEzICAgYy0xLjYxMy0wLjE2MS0zLjI3OC0wLjI0Mi00Ljk1LTAuMjQyYy0xMy4wNTYsMC0yNS41NjMsNC45MzEtMzUuNjExLDguODkzYy02LjkzNiwyLjczNS0xMi45MjcsNS4wOTctMTcuMDU5LDUuMDk3ICAgYy00LjY0MywwLTEwLjY2OC0yLjM5MS0xNy42NDUtNS4xNTljLTkuMzMtMy43MDMtMTkuOTA1LTcuODk5LTMxLjEtNy44OTljLTAuMjY3LDAtMC41MywwLjAwMy0wLjc4OSwwLjAwOCAgIEM3OC44OTQsNzMuNjQzLDU0LjI5OCw4OC41MzUsNDAuNzM4LDExMi4xMTl6IiBmaWxsPSIjMmUyZTJlIi8+Cgk8cGF0aCBpZD0iWE1MSURfMjMwXyIgZD0iTTIxMi4xMDEsMC4wMDJjLTE1Ljc2MywwLjY0Mi0zNC42NzIsMTAuMzQ1LTQ1Ljk3NCwyMy41ODNjLTkuNjA1LDExLjEyNy0xOC45ODgsMjkuNjc5LTE2LjUxNiw0OC4zNzkgICBjMC4xNTUsMS4xNywxLjEwNywyLjA3MywyLjI4NCwyLjE2NGMxLjA2NCwwLjA4MywyLjE1LDAuMTI1LDMuMjMyLDAuMTI2YzE1LjQxMywwLDMyLjA0LTguNTI3LDQzLjM5NS0yMi4yNTcgICBjMTEuOTUxLTE0LjQ5OCwxNy45OTQtMzMuMTA0LDE2LjE2Ni00OS43N0MyMTQuNTQ0LDAuOTIxLDIxMy4zOTUtMC4wNDksMjEyLjEwMSwwLjAwMnoiIGZpbGw9IiMyZTJlMmUiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+      }
+      .google-btn {
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBvbHlnb24gc3R5bGU9ImZpbGw6IzVDREFERDsiIHBvaW50cz0iMjkuNTMsMCAyOS41MywyNTEuNTA5IDI5LjUzLDUxMiAyOTkuMDA0LDI1MS41MDkgIi8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNCREVDQzQ7IiBwb2ludHM9IjM2OS4wNjcsMTgwLjU0NyAyNjIuMTc1LDExOS40NjcgMjkuNTMsMCAyOTkuMDA0LDI1MS41MDkgIi8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNEQzY4QTE7IiBwb2ludHM9IjI5LjUzLDUxMiAyOS41Myw1MTIgMjYyLjE3NSwzODMuNTUxIDM2OS4wNjcsMzIyLjQ3IDI5OS4wMDQsMjUxLjUwOSAiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0ZGQ0E5NjsiIGQ9Ik0zNjkuMDY3LDE4MC41NDdsLTcwLjA2Myw3MC45NjFsNzAuMDYzLDcwLjk2MWwxMDguNjg4LTYyLjg3N2M2LjI4OC0zLjU5Myw2LjI4OC0xMS42NzcsMC0xNS4yNyAgTDM2OS4wNjcsMTgwLjU0N3oiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+      }
+    
+      .market-btn-light {
+        border-color: rgba(255, 255, 255, 0.14);
+        background-color: rgba(0, 0, 0, 0);
+      }
+      .market-btn-light .market-button-title {
+        color: #fff;
+      }
+      .market-btn-light .market-button-subtitle {
+        color:  #7044cd;
+      }
+      .market-btn-light:hover {
+        background-color: #7044cd;
+      }
+      .market-btn-light.apple-btn {
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDUgMzA1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDUgMzA1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnIGlkPSJYTUxJRF8yMjhfIj4KCTxwYXRoIGlkPSJYTUxJRF8yMjlfIiBkPSJNNDAuNzM4LDExMi4xMTljLTI1Ljc4NSw0NC43NDUtOS4zOTMsMTEyLjY0OCwxOS4xMjEsMTUzLjgyQzc0LjA5MiwyODYuNTIzLDg4LjUwMiwzMDUsMTA4LjIzOSwzMDUgICBjMC4zNzIsMCwwLjc0NS0wLjAwNywxLjEyNy0wLjAyMmM5LjI3My0wLjM3LDE1Ljk3NC0zLjIyNSwyMi40NTMtNS45ODRjNy4yNzQtMy4xLDE0Ljc5Ny02LjMwNSwyNi41OTctNi4zMDUgICBjMTEuMjI2LDAsMTguMzksMy4xMDEsMjUuMzE4LDYuMDk5YzYuODI4LDIuOTU0LDEzLjg2MSw2LjAxLDI0LjI1Myw1LjgxNWMyMi4yMzItMC40MTQsMzUuODgyLTIwLjM1Miw0Ny45MjUtMzcuOTQxICAgYzEyLjU2Ny0xOC4zNjUsMTguODcxLTM2LjE5NiwyMC45OTgtNDMuMDFsMC4wODYtMC4yNzFjMC40MDUtMS4yMTEtMC4xNjctMi41MzMtMS4zMjgtMy4wNjZjLTAuMDMyLTAuMDE1LTAuMTUtMC4wNjQtMC4xODMtMC4wNzggICBjLTMuOTE1LTEuNjAxLTM4LjI1Ny0xNi44MzYtMzguNjE4LTU4LjM2Yy0wLjMzNS0zMy43MzYsMjUuNzYzLTUxLjYwMSwzMC45OTctNTQuODM5bDAuMjQ0LTAuMTUyICAgYzAuNTY3LTAuMzY1LDAuOTYyLTAuOTQ0LDEuMDk2LTEuNjA2YzAuMTM0LTAuNjYxLTAuMDA2LTEuMzQ5LTAuMzg2LTEuOTA1Yy0xOC4wMTQtMjYuMzYyLTQ1LjYyNC0zMC4zMzUtNTYuNzQtMzAuODEzICAgYy0xLjYxMy0wLjE2MS0zLjI3OC0wLjI0Mi00Ljk1LTAuMjQyYy0xMy4wNTYsMC0yNS41NjMsNC45MzEtMzUuNjExLDguODkzYy02LjkzNiwyLjczNS0xMi45MjcsNS4wOTctMTcuMDU5LDUuMDk3ICAgYy00LjY0MywwLTEwLjY2OC0yLjM5MS0xNy42NDUtNS4xNTljLTkuMzMtMy43MDMtMTkuOTA1LTcuODk5LTMxLjEtNy44OTljLTAuMjY3LDAtMC41MywwLjAwMy0wLjc4OSwwLjAwOCAgIEM3OC44OTQsNzMuNjQzLDU0LjI5OCw4OC41MzUsNDAuNzM4LDExMi4xMTl6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBpZD0iWE1MSURfMjMwXyIgZD0iTTIxMi4xMDEsMC4wMDJjLTE1Ljc2MywwLjY0Mi0zNC42NzIsMTAuMzQ1LTQ1Ljk3NCwyMy41ODNjLTkuNjA1LDExLjEyNy0xOC45ODgsMjkuNjc5LTE2LjUxNiw0OC4zNzkgICBjMC4xNTUsMS4xNywxLjEwNywyLjA3MywyLjI4NCwyLjE2NGMxLjA2NCwwLjA4MywyLjE1LDAuMTI1LDMuMjMyLDAuMTI2YzE1LjQxMywwLDMyLjA0LTguNTI3LDQzLjM5NS0yMi4yNTcgICBjMTEuOTUxLTE0LjQ5OCwxNy45OTQtMzMuMTA0LDE2LjE2Ni00OS43N0MyMTQuNTQ0LDAuOTIxLDIxMy4zOTUtMC4wNDksMjEyLjEwMSwwLjAwMnoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+      }
+      .market-btn-light.amazon-btn {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0idXVpZDo1RDIwODkyNDkzQkZEQjExOTE0QTg1OTBEMzE1MDhDOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1QjFCQzQ2QjRGNkQxMUU3OUY5REJEQzBGNkVBQUI5QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1QjFCQzQ2QTRGNkQxMUU3OUY5REJEQzBGNkVBQUI5QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QUM1ODJFMkIxNEExMUUzQkY1NEUzQkNCRjlEODA1RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QUM1ODJFM0IxNEExMUUzQkY1NEUzQkNCRjlEODA1RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4g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);
+      }
 
-<head>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5WBLJSD');
-    </script>
-    <!-- End Google Tag Manager -->
+      @media (min-width: 770px) {
+        /* Hide scrollbar for all elements */
+        ::-webkit-scrollbar {
+          display: none;
+        }
 
-    <script>
-        ! function() {
-            var analytics = window.analytics = window.analytics || [];
-            if (!analytics.initialize)
-                if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
-                else {
-                    analytics.invoked = !0;
-                    analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"];
-                    analytics.factory = function(e) {
-                        return function() {
-                            var t = Array.prototype.slice.call(arguments);
-                            t.unshift(e);
-                            analytics.push(t);
-                            return analytics
-                        }
-                    };
-                    for (var e = 0; e < analytics.methods.length; e++) {
-                        var key = analytics.methods[e];
-                        analytics[key] = analytics.factory(key)
-                    }
-                    analytics.load = function(key, e) {
-                        var t = document.createElement("script");
-                        t.type = "text/javascript";
-                        t.async = !0;
-                        t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
-                        var n = document.getElementsByTagName("script")[0];
-                        n.parentNode.insertBefore(t, n);
-                        analytics._loadOptions = e
-                    };
-                    analytics.SNIPPET_VERSION = "4.13.1";
-                    analytics.load("a4E5DSbWdGHsSIsDXciuqiy5jGuOv2w2");
-                    analytics.page();
-                }
-        }();
-    </script>
+        /* Hide scrollbar for body element */
+        body {
+          /* overflow: hidden; */
+        }
+
+        /* For Firefox */
+        html {
+          scrollbar-width: none; /* Hide scrollbar in Firefox */
+        }
+      }
+
+      .bg-auth-home {
+        padding: 0px 0 !important;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #7044cd;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7044cd;
+      }
+    </style>
+
     <meta charset="utf-8" />
-    <meta name="robots" content="noindex">
-    <title>User Log In | Suggestion Ox Anonymous Suggestion Box</title>
-    <meta name="description" content="Log in to your Suggestion Ox account and manage your anonymous feedback easily.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" />
+    <title>Login to myeNovation Portal</title>
+    <meta
+      name="description"
+      content="Log in to your Suggestion Ox account and manage your anonymous feedback easily."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-7c41dae5b21b671b64649651d3cb44917563f88012c39a6d55d4c6b2702c0029.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon2.png" />
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/assets/auth/css/bootstrap.min-e3eec188917e00103f4501ffe7157b8016148462a0609b285bec67d96680222d.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/auth/css/bootstrap.min-e3eec188917e00103f4501ffe7157b8016148462a0609b285bec67d96680222d.css"
+    />
     <!-- Icons -->
-    <link rel="stylesheet" href="/assets/auth/css/materialdesignicons.min-a1a63e631bdfaf2faa442b5884313e427804902d455781270431666970d008bc.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link
+      rel="stylesheet"
+      href="/assets/auth/css/materialdesignicons.min-a1a63e631bdfaf2faa442b5884313e427804902d455781270431666970d008bc.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
     <!-- Main css -->
-    <link rel="stylesheet" href="/assets/auth/css/style-5b25b6c3352cab19efe1888fefdf0d2f0cd38831cf8620441ea4ad6b921b26df.css" />
-    <link rel="stylesheet" href="/assets/auth/css/colors/default-944d8be014baa8fe10b226c080b0ad301b2e51f9f7dea66da8127ef7cd90101a.css" id="color-opt" />
-    <link rel="stylesheet" href="/assets/auth/css/new-marketing-2e2d102b1ea13ff08f65ed985a675d01dbb5220043b50c43dc9b803de37380f6.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/auth/css/style-5b25b6c3352cab19efe1888fefdf0d2f0cd38831cf8620441ea4ad6b921b26df.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/auth/css/colors/default-944d8be014baa8fe10b226c080b0ad301b2e51f9f7dea66da8127ef7cd90101a.css"
+      id="color-opt"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/auth/css/new-marketing-2e2d102b1ea13ff08f65ed985a675d01dbb5220043b50c43dc9b803de37380f6.css"
+    />
     <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="shqRNfNpg6GYod9cA_uJoQ6_1ZIYiW9hsW-aRCeEfzEOhTZcrQ4J1BZ6ljPktctZol121LLtm_awKG2p2Ksmnw" />
+    <meta
+      name="csrf-token"
+      content="shqRNfNpg6GYod9cA_uJoQ6_1ZIYiW9hsW-aRCeEfzEOhTZcrQ4J1BZ6ljPktctZol121LLtm_awKG2p2Ksmnw"
+    />
+  </head>
 
-</head>
-
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WBLJSD" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
+  <body>
     <!-- Hero Start -->
-    <section class="bg-auth-home d-table w-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 col-md-6">
-                    <div class="me-lg-5">
-                        <img class="img-fluid d-block mx-auto" src="/assets/transform-d5217a3c44492440e06563e23ceff4e80aeaafccbadcbe1a75aee9bc10115962.png" />
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="card border-0">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <img style="width: 180px; padding-bottom: 30px" src="/assets/sox_logo-acdaa224881e02fd4217b5f59a887e08f766d843ee878e6dead9dd6077fff2d6.webp" />
+    <section class="bg-auth-home d-table w-100" style="margin-top: -80px">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-6">
+            <div class="me-lg-5" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+                <img
+                  style="max-height: 80vh; border-radius: 40px;"
+                  class="img-fluid"
+                  src="/assets/hero02.png"
+                />
+              </div>
+              
+          </div>
 
-                            </div>
-                            <h4 class="card-title text-center">Log in to Suggestion Ox</h4>
-                            <form class="login-form mt-4" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="PbRK0lYKnp9SBjLvGkKThtC2A4OKXwrzN_tacin3pXzzMKObOh6bsqGpinOLXz1XhqWJC76CqFh7W5JHTiIPKg" autocomplete="off" />
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Email</label>
-                                            <div class="form-icon position-relative">
-                                                <input class="form-control" autocapitalize="off" autofocus="autofocus" placeholder="hr@example.com" required="required" type="email" name="user[email]" id="user_email" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <div class="form-icon position-relative">
-                                                <input class="form-control" placeholder="Password" required="required" type="password" name="user[password]" id="user_password" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-lg-12">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-3">
-                                            </div>
-                                            <p class="forgot-pass mb-2"><small><a class="text-dark fw-bold" href="/users/password/new">Forgot Password?</a></small></p>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-md-12">
-                                        <div class="d-grid">
-                                            <button type="submit" id="new_user_button" class="btn btn-effect-ripple btn-primary">Sign In</button>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-12 text-center">
-                                        <p class="mb-0 mt-3"><small class="text-dark me-2">Don&#39;t have an account? <a href="/users/start">Sign Up</a></small></p>
-                                    </div>
-                                    <!--end col-->
-                                </div>
-                                <!--end row-->
-                            </form>
-                        </div>
-                    </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="card border-0">
+              <div class="card-body" style="border: 1px solid #0000001a; border-radius: 10px; max-height: 92vh;">
+                <div class="text-center">
+                  <img
+                    style="width: 180px; padding-bottom: 5px"
+                    src="/assets/logo2.png"
+                  />
                 </div>
-                <!--end col-->
+                <h4 class="card-title text-center">
+                  Login to myeNovation Portal
+                </h4>
+                <form
+                  class="login-form mt-4"
+                  id="new_user"
+                  action="/users/sign_in"
+                  accept-charset="UTF-8"
+                  method="post"
+                  
+                >
+                  <input
+                    type="hidden"
+                    name="authenticity_token"
+                    value="PbRK0lYKnp9SBjLvGkKThtC2A4OKXwrzN_tacin3pXzzMKObOh6bsqGpinOLXz1XhqWJC76CqFh7W5JHTiIPKg"
+                    autocomplete="off"
+                  />
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <div class="form-icon position-relative">
+                          <input
+                            class="form-control"
+                            autocapitalize="off"
+                            autofocus="autofocus"
+                            placeholder="hr@example.com"
+                            required="required"
+                            type="email"
+                            name="user[email]"
+                            id="user_email"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="form-icon position-relative">
+                          <input
+                            class="form-control"
+                            placeholder="Password"
+                            required="required"
+                            type="password"
+                            name="user[password]"
+                            id="user_password"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-lg-12">
+                      <div class="d-flex justify-content-between">
+                        <div class="mb-3"></div>
+                        <p class="forgot-pass mb-2">
+                          <small
+                            ><a class="text-dark fw-bold" href="#"
+                              >Forgot Password?</a
+                            ></small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-12">
+                      <div class="d-grid">
+                        <button
+                          type="submit"
+                          id="new_user_button"
+                          class="btn btn-effect-ripple btn-primary"
+                          style="color: #7044cd;"
+                        >
+                          Log In
+                        </button>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-12 text-center">
+                      <p class="mb-0 mt-3">
+                        <small class="text-dark me-2"
+                          >Click Here for login issues?
+                          <a href="#">Help</a></small
+                        >
+                      </p>
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                  <div style="display: flex; justify-content: center; gap: 3px ;margin-top: 5px;">
+                    <a
+                      href="https://www.kobinet.com.tr/"
+                      target="_blank"
+                      class="market-btn apple-btn"
+                      role="button"
+                      style="border-radius: 20px;"
+                    >
+                      <span class="market-button-subtitle"
+                        >Get It On</span
+                      >
+                      <span class="market-button-title">App Store</span>
+                    </a>
+
+                    <!-- Google Play button -->
+                    <a
+                      href="https://www.kobinet.com.tr/"
+                      target="_blank"
+                      class="market-btn google-btn"
+                      role="button"
+                      style="border-radius: 20px;"
+                    >
+                      <span class="market-button-subtitle"
+                        >Get It On</span
+                      >
+                      <span class="market-button-title">Google Play</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
             </div>
-            <!--end row-->
+          </div>
+          <!--end col-->
         </div>
-        <!--end container-->
+        <!--end row-->
+      </div>
+      <!--end container-->
     </section>
     <!--end section-->
-    <!-- Hero End -->
 
+    <!-- Hero End -->
     <!-- javascript -->
     <script src="/assets/auth/js/bootstrap.bundle.min-326e1a7b3cfee058b4fe55286a595e4bdd8560ad1f215d948430a77b548d6c92.js"></script>
     <!-- Icons -->
@@ -160,7 +315,5 @@
     <!-- Main Js -->
     <script src="/assets/application-eefb0cb5ce073c623f843408a68a167e9809a6d39e4e9f6922ffd7d6505be02c.js"></script>
     <script src="/assets/auth/js/app-9876ee42fc65c2b5f2d623d17db2d6ab71de661829f2cfb1d6b0d58a078d1f10.js"></script>
-
-</body>
-
+  </body>
 </html>
