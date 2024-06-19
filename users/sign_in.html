@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5WBLJSD');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        ! function() {
+            var analytics = window.analytics = window.analytics || [];
+            if (!analytics.initialize)
+                if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+                else {
+                    analytics.invoked = !0;
+                    analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"];
+                    analytics.factory = function(e) {
+                        return function() {
+                            var t = Array.prototype.slice.call(arguments);
+                            t.unshift(e);
+                            analytics.push(t);
+                            return analytics
+                        }
+                    };
+                    for (var e = 0; e < analytics.methods.length; e++) {
+                        var key = analytics.methods[e];
+                        analytics[key] = analytics.factory(key)
+                    }
+                    analytics.load = function(key, e) {
+                        var t = document.createElement("script");
+                        t.type = "text/javascript";
+                        t.async = !0;
+                        t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                        var n = document.getElementsByTagName("script")[0];
+                        n.parentNode.insertBefore(t, n);
+                        analytics._loadOptions = e
+                    };
+                    analytics.SNIPPET_VERSION = "4.13.1";
+                    analytics.load("a4E5DSbWdGHsSIsDXciuqiy5jGuOv2w2");
+                    analytics.page();
+                }
+        }();
+    </script>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex">
+    <title>User Log In | Suggestion Ox Anonymous Suggestion Box</title>
+    <meta name="description" content="Log in to your Suggestion Ox account and manage your anonymous feedback easily.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-7c41dae5b21b671b64649651d3cb44917563f88012c39a6d55d4c6b2702c0029.ico" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/auth/css/bootstrap.min-e3eec188917e00103f4501ffe7157b8016148462a0609b285bec67d96680222d.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/auth/css/materialdesignicons.min-a1a63e631bdfaf2faa442b5884313e427804902d455781270431666970d008bc.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="/assets/auth/css/style-5b25b6c3352cab19efe1888fefdf0d2f0cd38831cf8620441ea4ad6b921b26df.css" />
+    <link rel="stylesheet" href="/assets/auth/css/colors/default-944d8be014baa8fe10b226c080b0ad301b2e51f9f7dea66da8127ef7cd90101a.css" id="color-opt" />
+    <link rel="stylesheet" href="/assets/auth/css/new-marketing-2e2d102b1ea13ff08f65ed985a675d01dbb5220043b50c43dc9b803de37380f6.css" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="shqRNfNpg6GYod9cA_uJoQ6_1ZIYiW9hsW-aRCeEfzEOhTZcrQ4J1BZ6ljPktctZol121LLtm_awKG2p2Ksmnw" />
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WBLJSD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Hero Start -->
+    <section class="bg-auth-home d-table w-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6">
+                    <div class="me-lg-5">
+                        <img class="img-fluid d-block mx-auto" src="/assets/transform-d5217a3c44492440e06563e23ceff4e80aeaafccbadcbe1a75aee9bc10115962.png" />
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img style="width: 180px; padding-bottom: 30px" src="/assets/sox_logo-acdaa224881e02fd4217b5f59a887e08f766d843ee878e6dead9dd6077fff2d6.webp" />
+
+                            </div>
+                            <h4 class="card-title text-center">Log in to Suggestion Ox</h4>
+                            <form class="login-form mt-4" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="PbRK0lYKnp9SBjLvGkKThtC2A4OKXwrzN_tacin3pXzzMKObOh6bsqGpinOLXz1XhqWJC76CqFh7W5JHTiIPKg" autocomplete="off" />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <div class="form-icon position-relative">
+                                                <input class="form-control" autocapitalize="off" autofocus="autofocus" placeholder="hr@example.com" required="required" type="email" name="user[email]" id="user_email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Password</label>
+                                            <div class="form-icon position-relative">
+                                                <input class="form-control" placeholder="Password" required="required" type="password" name="user[password]" id="user_password" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="mb-3">
+                                            </div>
+                                            <p class="forgot-pass mb-2"><small><a class="text-dark fw-bold" href="/users/password/new">Forgot Password?</a></small></p>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-md-12">
+                                        <div class="d-grid">
+                                            <button type="submit" id="new_user_button" class="btn btn-effect-ripple btn-primary">Sign In</button>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-12 text-center">
+                                        <p class="mb-0 mt-3"><small class="text-dark me-2">Don&#39;t have an account? <a href="/users/start">Sign Up</a></small></p>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+                                <!--end row-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Hero End -->
+
+    <!-- javascript -->
+    <script src="/assets/auth/js/bootstrap.bundle.min-326e1a7b3cfee058b4fe55286a595e4bdd8560ad1f215d948430a77b548d6c92.js"></script>
+    <!-- Icons -->
+    <script src="/assets/auth/js/feather.min-c59cef5c3ef050b36ff5d101128ae1e0ceedbffe7f79ec8e23caff902d569150.js"></script>
+    <!-- Main Js -->
+    <script src="/assets/application-eefb0cb5ce073c623f843408a68a167e9809a6d39e4e9f6922ffd7d6505be02c.js"></script>
+    <script src="/assets/auth/js/app-9876ee42fc65c2b5f2d623d17db2d6ab71de661829f2cfb1d6b0d58a078d1f10.js"></script>
+
+</body>
+
+</html>

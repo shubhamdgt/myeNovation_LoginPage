@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit:300,400,600,700&display=swap");
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Outfit", sans-serif !important
+}
+
+h4 {
+    font-weight: 600 !important;
+    font-size: 30px !important
+}
+
+small {
+    font-weight: 300 !important;
+    font-size: 14px !important
+}
+
+.form-label,
+.form-check-label {
+    font-weight: 400;
+    font-size: 14px !important
+}
+
+input,
+select {
+    border: 1px solid #e6e6e6 !important;
+    border-radius: 6px !important;
+    font-family: Outfit, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    line-height: 1.42857 !important;
+    padding: 10px 10px 10px 16px !important;
+    font-family: "Outfit", sans-serif !important
+}
+
+input::-moz-placeholder,
+select::-moz-placeholder {
+    color: #969798 !important
+}
+
+input::placeholder,
+select::placeholder {
+    color: #969798 !important
+}
+
+input:focus,
+select:focus {
+    border-color: #6138f1
+}
+
+.card-body {
+    border: none
+}
+
+.btn-primary {
+    background-color: #6138f1 !important;
+    border-radius: 10px !important;
+    font-size: 18px !important;
+    padding: 10px
+}
+
+.bg-auth-home {
+    padding: 80px 0 !important
+}
